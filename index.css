@@ -515,91 +515,39 @@ body {
 .social-icon {
     margin-left: 4px;
     transition: transform 0.2s;
-}
-.social-icon:hover {
-    transform: scale(1.15) rotate(-4deg);
-}
-.social-icon {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 54px;
-    height: 54px;
+    width: 32px;
+    height: 32px;
     border-radius: 50%;
     background: #fff;
     border: 2px solid #e0e4ef;
     box-shadow: 0 2px 8px rgba(0,0,0,0.10);
-    transition: transform 0.2s, box-shadow 0.2s, border 0.2s;
-    margin-left: 4px;
 }
 .social-icon:hover {
-    transform: scale(1.12) rotate(-4deg);
+    transform: scale(1.15) rotate(-4deg);
     box-shadow: 0 6px 18px rgba(44,62,80,0.18);
     border: 2px solid #4e6fae;
     background: #f7faff;
 }
 .social-icon svg {
-    width: 32px;
-    height: 32px;
+    width: 20px;
+    height: 20px;
     display: block;
 }
-.contact-info-box {
-    background: #f7f7fa;
-    border-radius: 14px;
-    padding: 24px 22px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-    margin-bottom: 12px;
+.whatsapp-inline {
     display: flex;
-    flex-direction: column;
-    gap: 18px;
-}
-.contact-info-box h3 {
-    color: #1a4d7a;
-    margin-bottom: 10px;
-    font-size: 1.18rem;
-}
-.contact-info-box h3::after {
-    content: "";
-    display: block;
-    margin: 10px 0 0 0;
-    width: 40px;
-    height: 3px;
-    border-radius: 2px;
-    background: linear-gradient(90deg, #1a4d7a 60%, #4e6fae 100%);
-}
-.contact-steps {
-    list-style: decimal inside;
-    padding-left: 0;
-    margin-bottom: 0;
-    color: #333;
-    font-size: 1.05rem;
-    line-height: 1.7;
-}
-.contact-steps li {
-    margin-bottom: 10px;
-}
-.contact-tips {
-    background: #e6eaf3;
-    border-radius: 8px;
-    padding: 12px 14px;
-    font-size: 0.98rem;
-    color: #1a4d7a;
-}
-.contact-map iframe {
-    width: 100%;
-    border-radius: 12px;
-    border: none;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    /* asigură spațiu între elemente și wrap pe mobil */
 }
 .whatsapp-buttons {
     display: inline-flex;
-    gap: 8px;
-    vertical-align: middle;
+    gap: 6px;
     margin: 0 6px;
 }
-.contact-steps .social-icon {
-    vertical-align: middle;
-}
-
 /* Servicii Page Grid */
 .services-page {
     max-width: 1100px;
