@@ -1,4 +1,46 @@
 document.addEventListener("DOMContentLoaded", function() {
+<<<<<<< HEAD
+=======
+    // ... codul tău existent pentru meniu/footer etc.
+
+    // Încarcă cookie-banner.html și inițializează logica
+    fetch('cookie-banner.html')
+        .then(r => r.text())
+        .then(html => {
+            document.getElementById('cookie-banner-placeholder').innerHTML = html;
+
+            // Inițializează logica cookie bannerului după ce a fost inserat în DOM
+            const cookieBanner = document.getElementById("cookie-banner");
+            const acceptCookiesButton = document.getElementById("accept-all-cookies");
+            const customizeCookiesButton = document.getElementById("customize-cookies");
+            const cookieCustomizePanel = document.getElementById("cookie-customize-panel");
+            const saveCookiesButton = document.getElementById("save-cookies");
+            const analyticsCookiesCheckbox = document.getElementById("analytics-cookies");
+
+            if (!localStorage.getItem("cookiesAccepted")) {
+                cookieBanner.style.display = "block";
+            }
+
+            acceptCookiesButton.addEventListener("click", function() {
+                localStorage.setItem("cookiesAccepted", "true");
+                cookieBanner.style.display = "none";
+            });
+
+            customizeCookiesButton.addEventListener("click", function() {
+                cookieCustomizePanel.style.display = "block";
+            });
+
+            saveCookiesButton.addEventListener("click", function() {
+                const analyticsCookiesAccepted = analyticsCookiesCheckbox.checked;
+                localStorage.setItem("analyticsCookies", analyticsCookiesAccepted);
+                cookieCustomizePanel.style.display = "none";
+                cookieBanner.style.display = "none";
+            });
+        });
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+>>>>>>> c766856 (first upload)
     fetch('menu.html')
         .then(response => response.text())
         .then(data => {
@@ -70,6 +112,7 @@ fetch('footer.html')
         }
     });
 });
+<<<<<<< HEAD
 // Banner cookie simplu
 document.addEventListener("DOMContentLoaded", function() {
     const banner = document.getElementById('cookie-banner');
@@ -103,3 +146,5 @@ document.addEventListener("DOMContentLoaded", function() {
         // Inițializează aici scripturi de analiză dacă e cazul
     };
 });
+=======
+>>>>>>> c766856 (first upload)
