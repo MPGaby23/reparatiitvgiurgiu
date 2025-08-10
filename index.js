@@ -5,7 +5,6 @@ document.addEventListener("DOMContentLoaded", function() {
         .then(html => {
             document.getElementById('cookie-banner-placeholder').innerHTML = html;
 
-            // Inițializează logica cookie bannerului după ce a fost inserat în DOM
             const cookieBanner = document.getElementById("cookie-banner");
             const acceptCookiesButton = document.getElementById("accept-all-cookies");
             const customizeCookiesButton = document.getElementById("customize-cookies");
