@@ -1,7 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    // ... codul tău existent pentru meniu/footer etc.
-
-    // Încarcă cookie-banner.html și inițializează logica
+   
     fetch('cookie-banner.html')
         .then(r => r.text())
         .then(html => {
@@ -42,8 +40,7 @@ document.addEventListener("DOMContentLoaded", function() {
         .then(response => response.text())
         .then(data => {
             document.getElementById('main-menu').innerHTML = data;
-
-            // Hamburger menu logic - rulează doar după ce meniul e în DOM!
+            
             const menuToggle = document.getElementById('menuToggle');
             const menuList = document.querySelector('.menuList');
             if (menuToggle && menuList) {
@@ -52,7 +49,6 @@ document.addEventListener("DOMContentLoaded", function() {
                     menuToggle.classList.toggle('active');
                 });
 
-                // Închide meniul la click pe link (UX mobil)
                 menuList.querySelectorAll('a').forEach(link => {
                     link.addEventListener('click', () => {
                         if (window.innerWidth <= 900) {
@@ -64,7 +60,6 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
 
-    // === Restul codului tău pentru slideshow ===
     let slideIndex = 0;
     function showSlide(n) {
         const slides = document.querySelectorAll('.slide');
